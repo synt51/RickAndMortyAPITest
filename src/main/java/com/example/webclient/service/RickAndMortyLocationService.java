@@ -10,7 +10,7 @@ public class RickAndMortyLocationService {
 
     static WebClient locations = WebClient.create("https://rickandmortyapi.com/api");
 
-    public static RickAndMortyLocation getLocationById(int locationId){
+    public RickAndMortyLocation getLocationById(int locationId){
 
         RickAndMortyLocation locationById = locations.get()
                 .uri("/location/"+ locationId)

@@ -9,7 +9,7 @@ public class RickAndMortyEpisodeService {
 
     static WebClient episodes = WebClient.create("https://rickandmortyapi.com/api");
 
-    public static RickAndMortyEpisode getEpisodeById(int episodeId){
+    public RickAndMortyEpisode getEpisodeById(int episodeId){
 
         RickAndMortyEpisode episodeById = episodes.get()
                 .uri("/episode/" + episodeId)

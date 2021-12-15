@@ -11,7 +11,7 @@ public class RickAndMortyCharacterService {
 
     static WebClient characters = WebClient.create("https://rickandmortyapi.com/api");
 
-    public static RickAndMortyCharacter getCharacterById(int characterId){
+    public RickAndMortyCharacter getCharacterById(int characterId){
 
         RickAndMortyCharacter characterById = characters.get()
                 .uri("/character/"+ characterId)

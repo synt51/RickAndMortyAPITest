@@ -14,9 +14,13 @@ public class WebclientApplication {
 
        // SpringApplication.run(WebclientApplication.class, args);
 
-        RickAndMortyCharacterService.getCharacterById(3);
-        RickAndMortyLocationService.getLocationById(1);
-        RickAndMortyEpisodeService.getEpisodeById(1);
+        RickAndMortyCharacterService characterService = new RickAndMortyCharacterService();
+        RickAndMortyLocationService locationService = new RickAndMortyLocationService();
+        RickAndMortyEpisodeService episodeService = new RickAndMortyEpisodeService();
+
+        characterService.getCharacterById(3);
+        locationService.getLocationById(1);
+        episodeService.getEpisodeById(1);
     }
 
 }
